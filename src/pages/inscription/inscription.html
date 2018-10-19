@@ -1,0 +1,62 @@
+<ion-header>
+  
+</ion-header>
+<ion-content>
+    <div class="inscription-container">
+      <img class="logo" src="assets/bfa.png" />
+        <form [formGroup]="form" (ngSubmit)="register()" id="formulaire">
+            <ion-item>
+              <ion-input type="text" formControlName="pseudo" placeholder="Pseudo"> </ion-input>
+            </ion-item>
+        
+            <ion-item>
+                <ion-input type="text" formControlName="nom" placeholder="Nom"></ion-input>
+            </ion-item>
+        
+            <ion-item>
+                <ion-input type="text" formControlName="prenom" placeholder="Prénoms" ></ion-input>
+            </ion-item>
+        
+            <ion-item>
+                <ion-input type="number" formControlName="num" placeholder="Téléphone"></ion-input>
+            </ion-item>
+            
+            <ion-item>
+                <ion-input type="mail" formControlName="mail" placeholder="Email" ></ion-input>
+            </ion-item>
+            
+            <ion-item>
+                    <ion-input type="text" formControlName="codeHopital" placeholder="Code hopital"></ion-input>
+            </ion-item>
+        
+            <ion-item>
+              <ion-select  formControlName="departement"  placeholder="Département" >
+                <ion-option *ngFor="let departement of departements" [value]="departement.idDepartement">{{departement.nom}}</ion-option>
+              </ion-select>  
+            </ion-item>
+            <ion-item>
+              <ion-select  formControlName="userGroupe"  placeholder="Vous êtes?" >
+                <ion-option *ngFor="let userGroupe of userGroupes" [value]="userGroupe.id">{{userGroupe.nom}}</ion-option>
+              </ion-select>  
+            </ion-item>
+        
+            <ion-item>
+              <ion-select  formControlName="groupeSanguin"  placeholder="Groupe Sanguin" >
+                <ion-option *ngFor="let groupeSanguin of groupeSanguins" [value]="groupeSanguin.id_groupeSanguin">{{groupeSanguin.groupeSanguin}}</ion-option>
+              </ion-select>  
+            </ion-item>
+        
+            <ion-item>
+              <ion-input type="password" formControlName="password" placeholder="Mot de Passe" ></ion-input>
+            </ion-item>
+        
+            <ion-item>
+              <ion-input type="password"  formControlName="confirmPwd"  placeholder="Confirmer Mot de Passe" ></ion-input>
+            </ion-item>
+            <button ion-button full id=resgiter_buton >S'enrégistrer</button> 
+          </form>
+        <button id="bottom" ion-button clear  color="light" (tap)="gotoLogin()"><strong>J'ai deja un compte? Connexion</strong></button>
+    </div> 
+  
+ 
+</ion-content>

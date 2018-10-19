@@ -1,0 +1,20 @@
+<ion-content id="fond">
+    <div class="login-container">
+        <img class="logo" src="assets/bfa.png"/>
+        <div id="formulaire">
+            <p><strong>Login</strong></p>
+            <ion-item>
+                <ion-input [(ngModel)]="pseudo" type="text"  placeholder="Pseudo"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-input [(ngModel)]="motDePasse" type="password" placeholder="Mot de Passe"></ion-input>
+            </ion-item>
+            <button ion-button id="login_buton" (tap)="login()">Se connecter</button>
+        </div>
+      
+        <div id="bottom">Vous n'avez pas un compte?<br/>
+          <button ion-button clear  color="light" (click)="goToSignup()"><strong> Inscrivez Vous</strong></button>
+        </div>
+
+    </div>
+</ion-content>
