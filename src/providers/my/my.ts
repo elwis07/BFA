@@ -9,7 +9,7 @@ import { Injectable } from '@angular/core';
 */
 @Injectable()
 export class MyProvider {
-  public baseURI       : string  = "http://localhost/ionic_fichier_php/";
+  public baseURI       : string  = "http://192.168.43.96/ionic_fichier_php/";
   constructor(public http: HttpClient) {
     console.log('Hello MyProvider Provider');
   }

@@ -2,22 +2,40 @@
     <ion-navbar>
       <ion-title>Selection de l'hopital</ion-title>
     </ion-navbar>
-  </ion-header>
-  <ion-content padding>
-    <p>Veuillez choisir l'hopital auquel vous vous connecter!</p>
-    <ul>
-      <li> First thing to do
-      </li>
-      <li> Second thing to do
-      </li>
-      <li> Third thing to do
-      </li>
-    </ul>
-    <p>
-      <img src="https://unsplash.it/600/300" alt="" />
-    </p>
+</ion-header>
+  <ion-content>
+      <ion-grid> 
+          <ion-row justify-content: space-around>
+              <ion-col col-6>
+                  <ion-card (tap)="gotoPage(1)">
+                      <img src="assets/hosto1.png"/>
+                      <ion-card-content>
+                        <ion-card-title>
+                          Banques de Sang
+                        </ion-card-title>
+                        <p>
+                          Liste les banques de sang du Bénin
+                        </p>
+                      </ion-card-content>
+                    </ion-card>
+                </ion-col>
+
+                <ion-col col-6>
+                    <ion-card (tap)="gotoPage(2)">
+                        <img src="assets/hosto1.png"/>
+                        <ion-card-content>
+                          <ion-card-title>
+                              Recherche 
+                          </ion-card-title>
+                          <p>
+                            Effectue une recherche dans  
+                            les différentes banques de sang du Bénin
+                          </p>
+                        </ion-card-content>
+                      </ion-card>
+                </ion-col>
+            </ion-row>
+      </ion-grid> 
+
   </ion-content>
-  <ion-footer>
-    <button   ion-button class="pied" (click)="dismiss()">Okay
-    </button>
-  </ion-footer>
+ 

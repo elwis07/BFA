@@ -202,7 +202,7 @@ export class InscriptionPage {
     });
     notification.present();
   }
-   sendAlert(message:string) {
+  sendAlert(message:string) {
     let alert = this.alertCtrl.create({
       title: 'Notification',
       subTitle: message,
@@ -230,7 +230,7 @@ export class InscriptionPage {
   }
 
   gotoLogin():void
-   {
-     this.navCtrl.push(LoginPage);
-   }
+  {
+    this.navCtrl.push(LoginPage);
+  }
 }

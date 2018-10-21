@@ -9,6 +9,10 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { InscriptionPage } from '../pages/inscription/inscription';
 import { LoginPage } from '../pages/login/login';
+import {  RechercheSangPage } from '../pages/rechercheSang/rechercheSang';
+import {  BanquesPage } from '../pages/banques/banques';
+
+
 import { MyProvider } from '../providers/my/my';
 
 @NgModule({
@@ -16,6 +20,8 @@ import { MyProvider } from '../providers/my/my';
     MyApp,
     InscriptionPage,
     LoginPage,
+    RechercheSangPage,
+    BanquesPage,
     HomePage
   ],
   imports: [
@@ -27,7 +33,9 @@ import { MyProvider } from '../providers/my/my';
   entryComponents: [
     MyApp,
     InscriptionPage,
+    RechercheSangPage,
     LoginPage,
+    BanquesPage,
     HomePage
   ],
   providers: [
