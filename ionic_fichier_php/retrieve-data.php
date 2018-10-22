@@ -48,6 +48,13 @@
 				echo json_encode($data);
 			break;
 
+			case 'getBanque':
+				$requete=$bdd->prepare("SELECT * FROM `banques`");
+				$requete->execute();
+				$data=$requete->fetchAll();
+				echo json_encode($data);
+			break;
+
 			case 'login':
 				$pseudo= filter_var($obj->pseudo, FILTER_SANITIZE_STRING, FILTER_FLAG_ENCODE_LOW);
 				$password= filter_var($obj->password, FILTER_SANITIZE_STRING, FILTER_FLAG_ENCODE_LOW);

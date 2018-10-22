@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le :  ven. 19 oct. 2018 à 22:47
+-- Généré le :  lun. 22 oct. 2018 à 10:00
 -- Version du serveur :  10.1.36-MariaDB
 -- Version de PHP :  7.2.10
 
@@ -38,6 +38,18 @@ CREATE TABLE `banques` (
   `latitude` varchar(45) DEFAULT NULL,
   `departement_idDepartement` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `banques`
+--
+
+INSERT INTO `banques` (`id`, `nom`, `email`, `num`, `localisation`, `longitude`, `latitude`, `departement_idDepartement`) VALUES
+(1, 'banque1', 'banque1.benin@gamil.com', 64251417, 'quelques part', NULL, NULL, 2),
+(2, 'banque2', 'banque2.benin@gmail.com', 98451201, 'quelque part', NULL, NULL, 3),
+(3, 'banque3', 'banque3.benin@gmail.com', 97451203, 'Ganhi', NULL, NULL, 8),
+(4, 'banque4', 'banque4.benin@gmail.com', 66521445, 'quelque part', NULL, NULL, 4),
+(5, 'banque5', 'banque5.benin@gmail.com', 64451202, 'quelques part', NULL, NULL, 5),
+(6, 'banque6', 'banque6.benin@gmail.com', 65124785, 'quelque part', NULL, NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -181,7 +193,8 @@ INSERT INTO `hopital_has_users` (`id`, `compteActif`, `hopital_id`, `hopital_cod
 (5, NULL, 1, '101010', 7),
 (6, NULL, 1, '101010', 8),
 (7, NULL, 1, '101010', 9),
-(8, NULL, 1, '101010', 10);
+(8, NULL, 1, '101010', 10),
+(9, NULL, 1, '101010', 11);
 
 -- --------------------------------------------------------
 
@@ -229,7 +242,8 @@ INSERT INTO `users` (`idusers`, `nom`, `prenoms`, `pseudo`, `password`, `email`,
 (7, 'seneque', 'jhhfgh', 'nek04', '12345678', 'elwis.loi@gmail.com', '64521015', 0, 3, 1),
 (8, 'koulo', 'sergio', 'sergio07', '12345678', 'sergio.koulo@gmail.com', '6787117', 0, 8, 2),
 (9, 'koulo', 'hugues', 'huguo', '12345678', 'koulo.huguo@gmail.com', '64521415', 0, 4, 6),
-(10, 'koulo', 'pauline', 'pauline', '12345678', 'paupau.koulo@gmail.com', '65120235', 0, 3, 6);
+(10, 'koulo', 'pauline', 'pauline', '12345678', 'paupau.koulo@gmail.com', '65120235', 0, 3, 6),
+(11, 'ochoumaré', 'loic', 'loic07', '12345678', 'loic.ochu@gmail.com', '66323069', 0, 4, 6);
 
 -- --------------------------------------------------------
 
@@ -255,7 +269,8 @@ INSERT INTO `users_has_group` (`id`, `users_idusers`, `group_id`) VALUES
 (5, 7, 2),
 (6, 8, 2),
 (7, 9, 2),
-(8, 10, 2);
+(8, 10, 2),
+(9, 11, 2);
 
 --
 -- Index pour les tables déchargées
@@ -341,7 +356,7 @@ ALTER TABLE `users_has_group`
 -- AUTO_INCREMENT pour la table `banques`
 --
 ALTER TABLE `banques`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT pour la table `banques_has_users`
@@ -377,7 +392,7 @@ ALTER TABLE `hopital`
 -- AUTO_INCREMENT pour la table `hopital_has_users`
 --
 ALTER TABLE `hopital_has_users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT pour la table `stock`
@@ -389,13 +404,13 @@ ALTER TABLE `stock`
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `idusers` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `idusers` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT pour la table `users_has_group`
 --
 ALTER TABLE `users_has_group`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Contraintes pour les tables déchargées
